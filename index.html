@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment 10</title>
+</head>
+<body>
+    <h2>Assessment 10 - Qus.no.03</h2>
+<script>
+//Write a JavaScript program that prompts the user to enter a sentence. 
+//Count the number of words in the sentence and display the result in an alert box. 
+
+function countWords(sentence) {
+  // Remove leading and trailing whitespaces
+  sentence = sentence.trim();
+
+  // Split the sentence into words using whitespace as the delimiter
+  const wordsArray = sentence.split(/\s+/);
+
+  // Return the number of words
+  return wordsArray.length;
+}
+
+// Ask the user to enter a sentence
+const userSentence = prompt("Enter a sentence:");
+
+// Check if the user entered a sentence
+if (userSentence !== null && userSentence.trim() !== "") {
+  // Count the number of words in the sentence
+  const wordCount = countWords(userSentence);
+
+  // Display the result in an alert
+  alert(`The sentence contains ${wordCount} ${wordCount === 1 ? "word" : "words"}.`);
+} else {
+  // Handle the case when the user didn't enter a sentence
+  alert("You didn't enter a valid sentence.");
+}
+
+</script>
+</body>
+</html>
